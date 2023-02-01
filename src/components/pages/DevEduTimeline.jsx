@@ -33,6 +33,7 @@ const DevEduTimeline = () => {
             style={{
               transitionDelay: loading ? `${index + 3}99ms` : "0ms",
             }}
+            key={index}
           >
             <TimelineItem key={index}>
               <TimelineSeparator>

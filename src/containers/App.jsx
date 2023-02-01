@@ -39,6 +39,10 @@ function App() {
     setPageNumber(newpageNumber);
   };
 
+  const handlePageChange = (index) => {
+    setPageNumber(index);
+  };
+
   const handleThemeChange = () => {
     setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
   };
@@ -62,7 +66,7 @@ function App() {
           <SwipeableViews
             axis="x"
             index={pageNumber}
-            onChangeIndex={handlePageNumber}
+            onChangeIndex={handlePageChange}
           >
             <Page pageNumber={pageNumber} index={0}>
               <Home />
